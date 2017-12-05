@@ -34,13 +34,13 @@ calcTree (Node op a b) = (operation op)  (calcTree a) (calcTree b)
 --calc (a, op, b) = (operation op) (toNum a) (toNum b)
 
 
-toNum num = read num :: Integer
+toNum num = read num :: Float
 
 operation s
   | s == "+" = (+)
   | s == "-" = (-)
   | s == "*" = (*)
-  | s == "/" = div
+  | s == "/" = (/)
   
   
   
